@@ -1,7 +1,7 @@
 
 ## Features
 
-- **W&B Integration**: Fetch runs and metrics from Weights & Biases
+- **W&B Integration**: Fetch validator runs from w&b for analysis
 - **Performance Analysis**: Compute comprehensive metrics including:
   - Multiclass accuracy, precision, recall, F1, MCC
   - Binary accuracy, precision, recall, F1, AUC, MCC
@@ -25,10 +25,8 @@
 The tools generate several output files:
 - `miner_predictions.csv`: Detailed prediction data
 - `miner_performance.csv`: Aggregated performance metrics
-- `media_gallery.html`: Visual gallery of challenge media and predictions
 - Downloaded media files in the specified download directory
-
-## Screenshots
+- `media_gallery.html`: Visual gallery of challenge media and predictions
 
 <p align="center">
   <img src="static/example_gallery.png" alt="W&B Explorer Screenshot" width="800"/>
