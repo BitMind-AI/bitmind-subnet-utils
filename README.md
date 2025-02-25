@@ -1,7 +1,13 @@
 
+## Setup
+```
+git clone git@github.com:BitMind-AI/bitmind-subnet-utils.git
+cd bitmind-subnet-utils && pip install -r requirements.txt
+```
+
 ## Features
 
-- **W&B Integration**: Fetch validator runs from w&b for analysis
+- **W&B Downloads**: Fetch validator runs from w&b for analysis
 - **Performance Analysis**: Compute comprehensive metrics including:
   - Multiclass accuracy, precision, recall, F1, MCC
   - Binary accuracy, precision, recall, F1, AUC, MCC
