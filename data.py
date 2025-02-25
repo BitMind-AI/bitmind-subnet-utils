@@ -168,7 +168,7 @@ def compute_miner_performance(
                 except Exception:
                      challenge_data['wandb_filepath'].append('No Media Found')
 
-                challenge_data['challenge_id'].append(challenge_row.get('challenge_id', ''))
+                challenge_data['validator_run'].append(run.name)
                 challenge_data['timestamp'].append(challenge_row['_timestamp'])
 
     all_miner_preds_df = pd.DataFrame(challenge_data)
@@ -255,7 +255,6 @@ def download_challenge_media(
                 continue
                 
             modality = challenge_row.get('modality', 'image')
-            challenge_id = challenge_row.get('challenge_id', '')
             
             # Process the media file
             should_download = ((modality == 'image' and download_images) or 
@@ -280,7 +279,7 @@ def download_challenge_media(
                         if miner_uids is not None and uid not in miner_uids:
                             continue
                             
-                        download_data['challenge_id'].append(challenge_id)
+                        download_data['validator_run'].append(run.name)
                         download_data['modality'].append(modality)
                         download_data['uid'].append(uid)
                         download_data['wandb_filepath'].append(media_path)
@@ -304,7 +303,7 @@ def download_challenge_media(
                     except: 
                         media_path = ''
                         local_path = 'Download Failed'
-                        download_data['challenge_id'].append(challenge_id)
+                        download_data['validator_run'].append(run.name)
                         download_data['modality'].append(modality)
                         download_data['uid'].append(uid)
                         download_data['timestamp'].append(challenge_row['_timestamp'])

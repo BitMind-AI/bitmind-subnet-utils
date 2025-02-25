@@ -1,0 +1,6 @@
+wandb
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn 
